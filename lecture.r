@@ -3,7 +3,9 @@ rm(list=ls())
 rm(list=ls(all.names=TRUE))
 
 
-fichier<-choose.files(default="",caption="Selectionnez le fichier contenant vos données")
+print("Sélectionnez le fichier texte contenant vos données.")
+
+fichier<-choose.files(default="",caption="Selectionnez le fichier texte contenant vos données")
 nom_fichier<- sub("(.*\\\\)(.*?$)",'\\2',fichier)
 chemin<- sub("(.*\\\\)(.*?$)",'\\1',fichier)
 
@@ -28,4 +30,4 @@ colnames(Data_test)<-titre
 
 nom_fichier_ssextension<-substr(nom_fichier,1,nchar(nom_fichier)-4)
  
-print("Vos données sont chargées.")
+print("Vos données sont chargées. Vous pouvez à présent exécuter un module.")
